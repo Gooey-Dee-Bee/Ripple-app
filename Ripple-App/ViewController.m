@@ -13,7 +13,7 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *tracks;
 @property (nonatomic, strong) AVAudioPlayer *player;
 @property(nonatomic, strong) CLLocationManager *locationManager;
@@ -105,15 +105,17 @@
     [self.loading startAnimating];
     
     // TABLEVIEW
+    self.tableView = [[UITableView alloc] init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-//    self.tableView.frame = CGRectMake(0.0, 0.0, [self.screenSize[@"width"] doubleValue], [self.screenSize[@"height"] doubleValue]);
+    self.tableView.frame = CGRectMake(0.0, 64.0, [self.screenSize[@"width"] doubleValue], [self.screenSize[@"height"] doubleValue]);
     self.tableView.backgroundColor = [UIColor colorWithRed:0x1F/255.0 green:0x32/255.0 blue:0x4D/255.0 alpha:1.0];
     self.view.backgroundColor = [UIColor colorWithRed:0x1F/255.0 green:0x32/255.0 blue:0x4D/255.0 alpha:1.0];
     [self.tableView registerClass:[songCell class] forCellReuseIdentifier:@"cell"];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:refreshControl];
+    [self.view addSubview:self.tableView];
     
     // NAV BAR
     self.navigationItem.title = @"Ripple";

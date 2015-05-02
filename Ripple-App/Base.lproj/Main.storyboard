@@ -15,35 +15,7 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lDf-Sg-Z6d">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0TD-xU-cNt">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0TD-xU-cNt" id="Azi-Wj-k1O">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="320" height="480"/>
-                                </variation>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="lDf-Sg-Z6d"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="lDf-Sg-Z6d"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="iwx-u3-f5b">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="bpZ-nC-RNz">
@@ -54,7 +26,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="signInButton" destination="bpZ-nC-RNz" id="muF-SU-9np"/>
-                        <outlet property="tableView" destination="lDf-Sg-Z6d" id="Qx7-El-Vw3"/>
                         <segue destination="UdU-MO-GIV" kind="presentation" identifier="signInSegue" id="4HS-i8-jD4"/>
                         <segue destination="hOt-81-cWV" kind="presentation" identifier="accountSegue" id="Osi-Oy-Y3U"/>
                     </connections>
